@@ -22,7 +22,7 @@ public:
 	
 	void imprimir();
 private:
-	int tipo;//1=moto;2=carro;3=caminhão;
+	int tipo;//1=moto;2=carro;3=caminhão;4=tanque
 	int velMax;
 	bool arma;
 
@@ -49,6 +49,7 @@ int Veiculo::getVelMax(){
 	return velMax;
 }
 bool Veiculo::getArma(){
+
 	return arma;
 }
 
@@ -83,5 +84,41 @@ Moto::Moto(){
 
 }
 
+//nova classe carro herdando as propriedades
+//da classe Veiculo
+class Carro: public Veiculo{
+
+public:
+	Carro();
+};
+
+Carro::Carro(){
+	vel = 0;
+	blind =0;
+	rodas = 4;
+	
+
+	setTipo(2);
+	setVelMax(180);
+	setArma(false);
+
+}
+
+//nova classe caminhão
+class Tanque:public Veiculo{
+public:
+	Tanque();
+};
+
+Tanque::Tanque(){
+	vel = 0;
+	blind = 1;
+	rodas = 8;
+	
+
+	setTipo(4);
+	setVelMax(200);
+	setArma(true);
+}
 
 #endif//CLASSES_H_INCLUDED

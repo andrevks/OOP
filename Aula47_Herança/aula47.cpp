@@ -5,11 +5,14 @@ using namespace std;
 
 int main()
 {
-	Moto * m1 = new Moto();
-	cout<< "Rodas: "<<m1->rodas<<endl;
-	cout<<	"Blindagem: "<<m1->blind<<endl;
-	cout<<"Velocidade: "<<m1->vel<<endl;
+	Moto * v1 = new Moto();
+	Carro *v2 = new Carro();
+	Tanque *v3 = new Tanque();
 
-	m1->imprimir();
+	v1->imprimir();
+	v2->imprimir();
+	v3->imprimir();
+
+
 	return 0;
 }
